@@ -1,0 +1,870 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>EMORIA | Brand Photography &amp; Film</title>
+<meta name="description" content="建築・クリニック・経営者・ホテルのブランディング撮影。写真、ショートムービー、ブランドフィルムまで、事業に必要なビジュアルを一日の撮影でまとめてお届けします。">
+<meta property="og:title" content="EMORIA | Brand Photography &amp; Film">
+<meta property="og:description" content="事業を、美しく伝える。建築・クリニック・経営者・ホテルのブランディング撮影。">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://yuya-suzuki-37.github.io/emoria/">
+<meta property="og:image" content="https://yuya-suzuki-37.github.io/emoria/assets/img/hero-architecture.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500&family=Shippori+Mincho:wght@400;500;600&family=Zen+Kaku+Gothic+New:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#FAF9F6;
+  --paper:#FFFFFF;
+  --ink:#1B1A17;
+  --gray:#8B877E;
+  --line:#E7E4DC;
+  --serif-en:'Cormorant Garamond',serif;
+  --serif-ja:'Shippori Mincho',serif;
+  --sans-ja:'Zen Kaku Gothic New',sans-serif;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  background:var(--bg);
+  color:var(--ink);
+  font-family:var(--sans-ja);
+  font-weight:300;
+  line-height:1.9;
+  letter-spacing:.04em;
+  -webkit-font-smoothing:antialiased;
+  overflow-x:hidden;
+}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+ul{list-style:none}
+
+/* ---------- header ---------- */
+header{
+  position:fixed;top:0;left:0;right:0;z-index:100;
+  display:flex;justify-content:space-between;align-items:center;
+  padding:28px 48px;
+  transition:background .5s ease, padding .5s ease, box-shadow .5s ease;
+  color:#fff;
+}
+header.scrolled{
+  background:rgba(250,249,246,.92);
+  backdrop-filter:blur(12px);
+  -webkit-backdrop-filter:blur(12px);
+  color:var(--ink);
+  padding:16px 48px;
+  box-shadow:0 1px 0 var(--line);
+}
+.logo{
+  font-family:var(--serif-en);
+  font-weight:400;
+  font-size:20px;
+  letter-spacing:.28em;
+}
+nav.pc ul{display:flex;gap:40px}
+nav.pc a{
+  font-family:var(--serif-en);
+  font-size:14px;
+  letter-spacing:.22em;
+  position:relative;
+  padding-bottom:4px;
+}
+nav.pc a::after{
+  content:'';position:absolute;left:0;bottom:0;width:0;height:1px;
+  background:currentColor;transition:width .4s ease;
+}
+nav.pc a:hover::after{width:100%}
+.menu-btn{display:none;background:none;border:none;cursor:pointer;color:inherit;z-index:120}
+.menu-btn span{display:block;width:26px;height:1px;background:currentColor;margin:8px 0;transition:.4s}
+
+/* mobile overlay nav */
+.overlay-nav{
+  position:fixed;inset:0;background:rgba(250,249,246,.98);z-index:110;
+  display:flex;align-items:center;justify-content:center;
+  opacity:0;pointer-events:none;transition:opacity .5s ease;
+}
+.overlay-nav.open{opacity:1;pointer-events:auto}
+.overlay-nav ul{text-align:center}
+.overlay-nav a{
+  font-family:var(--serif-en);
+  font-size:26px;letter-spacing:.3em;color:var(--ink);
+  display:block;padding:18px 0;
+}
+body.menu-open .menu-btn{color:var(--ink)}
+body.menu-open .menu-btn span:nth-child(1){transform:translateY(4.5px) rotate(45deg)}
+body.menu-open .menu-btn span:nth-child(2){transform:translateY(-4.5px) rotate(-45deg)}
+
+/* ---------- hero ---------- */
+.hero{
+  position:relative;height:100vh;height:100svh;min-height:560px;
+  display:flex;align-items:center;justify-content:center;
+  overflow:hidden;
+}
+.hero-bg{
+  position:absolute;inset:0;
+  background:url('assets/img/hero-architecture.jpg') center/cover no-repeat;
+  animation:kenburns 24s ease-out forwards;
+}
+@keyframes kenburns{from{transform:scale(1)}to{transform:scale(1.08)}}
+.hero::after{
+  content:'';position:absolute;inset:0;
+  background:linear-gradient(to bottom,rgba(15,14,12,.32),rgba(15,14,12,.12) 45%,rgba(15,14,12,.38));
+}
+.hero-inner{position:relative;z-index:2;text-align:center;color:#fff;padding:0 24px}
+.hero-title{
+  font-family:var(--serif-en);
+  font-weight:300;
+  font-size:clamp(44px,8vw,96px);
+  letter-spacing:.22em;
+  text-indent:.22em;
+  line-height:1.15;
+  opacity:0;animation:fadeup 1.6s .3s ease forwards;
+}
+.hero-sub{
+  font-family:var(--serif-en);
+  font-size:clamp(12px,1.6vw,16px);
+  letter-spacing:.5em;text-indent:.5em;
+  margin-top:22px;
+  opacity:0;animation:fadeup 1.6s .8s ease forwards;
+}
+.hero-ja{
+  font-family:var(--serif-ja);
+  font-size:clamp(12px,1.5vw,15px);
+  letter-spacing:.42em;text-indent:.42em;
+  margin-top:34px;font-weight:400;
+  opacity:0;animation:fadeup 1.6s 1.3s ease forwards;
+}
+@keyframes fadeup{from{opacity:0;transform:translateY(26px)}to{opacity:1;transform:none}}
+.scroll-line{
+  position:absolute;bottom:0;left:50%;z-index:3;
+  width:1px;height:90px;overflow:hidden;
+}
+.scroll-line::before{
+  content:'';position:absolute;top:-90px;left:0;width:1px;height:90px;
+  background:#fff;animation:scrolldown 2.4s ease-in-out infinite;
+}
+@keyframes scrolldown{0%{top:-90px}55%{top:0}100%{top:90px}}
+
+/* ---------- common ---------- */
+section{padding:140px 48px}
+.container{max-width:1180px;margin:0 auto}
+.sec-head{margin-bottom:80px;text-align:center}
+.sec-en{
+  font-family:var(--serif-en);
+  font-size:13px;letter-spacing:.45em;text-indent:.45em;
+  color:var(--gray);
+  display:block;margin-bottom:18px;
+}
+.sec-ja{
+  font-family:var(--serif-ja);
+  font-weight:500;
+  font-size:clamp(24px,3.4vw,34px);
+  letter-spacing:.14em;
+  line-height:1.7;
+}
+.reveal{opacity:0;transform:translateY(30px);transition:opacity 1.1s ease,transform 1.1s ease}
+.reveal.in{opacity:1;transform:none}
+
+/* ---------- philosophy ---------- */
+.philosophy{text-align:center;padding-top:170px}
+.phil-copy{
+  font-family:var(--serif-ja);
+  font-weight:500;
+  font-size:clamp(26px,4.4vw,44px);
+  letter-spacing:.16em;
+  line-height:2;
+  margin-bottom:56px;
+}
+.phil-text{
+  max-width:640px;margin:0 auto;
+  color:#4A4841;
+  font-size:15px;line-height:2.4;
+}
+.phil-text + .phil-text{margin-top:28px}
+
+/* ---------- works (service showcase) ---------- */
+.works{background:var(--paper);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.show-block{margin-bottom:120px}
+.show-block:last-child{margin-bottom:0}
+.show-head{
+  display:flex;align-items:flex-end;gap:28px;
+  padding-bottom:22px;margin-bottom:34px;
+  border-bottom:1px solid var(--line);
+}
+.show-num{
+  font-family:var(--serif-en);
+  font-size:15px;letter-spacing:.3em;color:var(--gray);
+  padding-bottom:6px;
+}
+.show-title{display:flex;flex-direction:column;gap:4px}
+.show-en{
+  font-family:var(--serif-en);
+  font-size:26px;letter-spacing:.16em;line-height:1.2;
+}
+.show-ja{
+  font-family:var(--serif-ja);font-weight:500;
+  font-size:13.5px;letter-spacing:.2em;color:var(--gray);
+}
+.show-lead{
+  margin-left:auto;
+  font-size:13px;color:#4A4841;line-height:2;
+  max-width:380px;text-align:right;
+}
+.show-grid{display:grid;gap:26px}
+.show-grid figure{
+  position:relative;overflow:hidden;cursor:pointer;
+  background:#EDEBE5;margin:0;
+}
+.show-grid img{
+  width:100%;height:100%;object-fit:cover;display:block;
+  transition:transform 1.2s cubic-bezier(.22,1,.36,1);
+}
+.show-grid figure:hover img{transform:scale(1.045)}
+/* 業種ごとのレイアウト（横写真セルに3:2の基準高さを与え、縦写真セルは行スパンでトリム） */
+.g-arch .s1,.g-arch .s3,
+.g-clinic .s2,.g-clinic .s3,
+.g-exec .s1,.g-exec .s3,
+.g-hotel .s2,.g-hotel .s3{aspect-ratio:3/2}
+.g-arch{grid-template-columns:7fr 5fr;grid-template-areas:"a b" "c b"}
+.g-arch .s1{grid-area:a}.g-arch .s2{grid-area:b}.g-arch .s3{grid-area:c}
+.g-clinic{grid-template-columns:5fr 7fr;grid-template-areas:"a b" "a c"}
+.g-clinic .s1{grid-area:a}.g-clinic .s2{grid-area:b}.g-clinic .s3{grid-area:c}
+.g-exec{grid-template-columns:7fr 5fr;grid-template-areas:"a b" "c b"}
+.g-exec .s1{grid-area:a}.g-exec .s2{grid-area:b}.g-exec .s3{grid-area:c}
+.g-hotel{grid-template-columns:5fr 7fr;grid-template-areas:"a b" "a c"}
+.g-hotel .s1{grid-area:a}
+.g-hotel .s2{grid-area:b}.g-hotel .s3{grid-area:c}
+.g-other{grid-template-columns:1fr 1fr 1fr}
+.g-other figure{aspect-ratio:4/3}
+.g-other .obj-top img{object-position:center 25%}
+.other-cap{
+  margin-top:14px;
+  font-family:var(--serif-en);
+  font-size:11.5px;letter-spacing:.22em;color:var(--gray);
+  display:block;
+}
+.other-cap b{
+  display:block;font-weight:400;
+  font-family:var(--serif-ja);
+  font-size:12.5px;letter-spacing:.14em;color:#4A4841;
+  margin-top:4px;
+}
+.g-other .wrap{display:flex;flex-direction:column}
+.show-more{display:flex;justify-content:flex-end;margin-top:20px}
+.show-more a{
+  font-family:var(--serif-en);
+  font-size:12px;letter-spacing:.28em;
+  color:var(--gray);
+  padding-bottom:4px;
+  border-bottom:1px solid var(--line);
+  transition:color .4s,border-color .4s;
+}
+.show-more a:hover{color:var(--ink);border-color:var(--ink)}
+.svc-more{margin-top:26px}
+.svc-more a{
+  font-family:var(--serif-en);
+  font-size:11.5px;letter-spacing:.26em;
+  color:var(--gray);
+  border-bottom:1px solid var(--line);
+  padding-bottom:3px;
+  transition:color .4s,border-color .4s;
+}
+.svc-more a:hover{color:var(--ink);border-color:var(--ink)}
+.svc-other a{border-bottom:1px solid #C9C5BC;padding-bottom:2px;transition:color .3s,border-color .3s}
+.svc-other a:hover{color:var(--ink);border-color:var(--ink)}
+
+/* lightbox */
+.lightbox{
+  position:fixed;inset:0;z-index:200;
+  background:rgba(20,19,16,.94);
+  display:flex;align-items:center;justify-content:center;
+  opacity:0;pointer-events:none;transition:opacity .45s ease;
+}
+.lightbox.open{opacity:1;pointer-events:auto}
+.lightbox img{max-width:88vw;max-height:84vh;box-shadow:0 30px 80px rgba(0,0,0,.5)}
+.lb-close{
+  position:absolute;top:26px;right:34px;
+  background:none;border:none;color:#fff;cursor:pointer;
+  font-family:var(--serif-en);font-size:14px;letter-spacing:.25em;
+  opacity:.75;transition:opacity .3s;
+}
+.lb-close:hover{opacity:1}
+.lb-arrow{
+  position:absolute;top:50%;transform:translateY(-50%);
+  background:none;border:none;color:#fff;cursor:pointer;
+  font-size:30px;font-weight:200;opacity:.6;transition:opacity .3s;
+  padding:20px;
+}
+.lb-arrow:hover{opacity:1}
+.lb-prev{left:16px}.lb-next{right:16px}
+.lb-cap{
+  position:absolute;bottom:28px;left:50%;transform:translateX(-50%);
+  color:#fff;font-family:var(--serif-en);
+  font-size:12px;letter-spacing:.3em;opacity:.75;
+}
+
+/* ---------- strength ---------- */
+.strength-list{
+  display:grid;grid-template-columns:repeat(3,1fr);gap:64px 56px;
+  max-width:1080px;margin:0 auto;
+}
+.strength{text-align:center}
+.strength .num{
+  font-family:var(--serif-en);
+  font-size:15px;letter-spacing:.3em;
+  color:var(--gray);
+  display:block;margin-bottom:26px;
+}
+.strength .en{
+  font-family:var(--serif-en);
+  font-size:22px;letter-spacing:.18em;
+  display:block;margin-bottom:14px;
+}
+.strength .ja{
+  font-family:var(--serif-ja);font-weight:500;
+  font-size:16px;letter-spacing:.14em;
+  display:block;margin-bottom:22px;
+}
+.strength p{
+  font-size:13.5px;color:#4A4841;line-height:2.2;text-align:left;
+}
+.strength-line{width:1px;height:44px;background:var(--line);margin:0 auto 26px}
+
+/* ---------- services ---------- */
+.services{background:var(--paper);border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.svc-grid{display:grid;grid-template-columns:1fr 1fr;gap:0;border:1px solid var(--line)}
+.svc{
+  padding:64px 56px;
+  border-right:1px solid var(--line);
+  border-bottom:1px solid var(--line);
+  transition:background .5s ease;
+  position:relative;
+}
+.svc:nth-child(2n){border-right:none}
+.svc:nth-last-child(-n+2){border-bottom:none}
+.svc:hover{background:#FCFBF8}
+.svc .num{
+  font-family:var(--serif-en);
+  font-size:13px;letter-spacing:.3em;color:var(--gray);
+  display:block;margin-bottom:22px;
+}
+.svc .en{
+  font-family:var(--serif-en);
+  font-size:24px;letter-spacing:.16em;
+  display:block;margin-bottom:8px;
+}
+.svc .ja{
+  font-family:var(--serif-ja);font-weight:500;
+  font-size:15px;letter-spacing:.16em;color:#4A4841;
+  display:block;margin-bottom:24px;
+}
+.svc p{font-size:13.5px;color:#4A4841;line-height:2.2;margin-bottom:24px}
+.svc .deliv{
+  display:flex;flex-wrap:wrap;gap:8px;
+}
+.svc .deliv span{
+  font-size:11px;letter-spacing:.1em;color:var(--gray);
+  border:1px solid var(--line);
+  padding:5px 13px;border-radius:999px;
+  background:var(--bg);
+}
+.svc-other{
+  margin-top:56px;text-align:center;
+  font-size:13.5px;color:var(--gray);letter-spacing:.12em;
+}
+.svc-other b{font-weight:400;color:#4A4841}
+
+/* ---------- flow ---------- */
+.flow-list{
+  display:grid;grid-template-columns:repeat(4,1fr);gap:48px 40px;
+  max-width:1100px;margin:0 auto;
+}
+.flow-item{text-align:center;position:relative}
+.flow-item:not(:last-child)::after{
+  content:'';position:absolute;top:9px;left:calc(50% + 46px);
+  width:calc(100% - 92px);height:1px;background:var(--line);
+}
+.flow-item .dot{
+  width:7px;height:7px;border-radius:50%;
+  background:var(--ink);margin:6px auto 26px;
+}
+.flow-item .num{
+  font-family:var(--serif-en);
+  font-size:13px;letter-spacing:.3em;color:var(--gray);
+  display:block;margin-bottom:12px;
+}
+.flow-item .en{
+  font-family:var(--serif-en);font-size:17px;letter-spacing:.18em;
+  display:block;margin-bottom:8px;
+}
+.flow-item .ja{
+  font-family:var(--serif-ja);font-weight:500;
+  font-size:14.5px;letter-spacing:.12em;
+  display:block;margin-bottom:16px;
+}
+.flow-item p{font-size:12.5px;color:#4A4841;line-height:2.1;text-align:left}
+
+/* ---------- about ---------- */
+.about{background:var(--paper);border-top:1px solid var(--line)}
+.about-wrap{
+  display:grid;grid-template-columns:5fr 7fr;gap:80px;align-items:center;
+  max-width:1080px;margin:0 auto;
+}
+.about-photo{overflow:hidden}
+.about-photo img{transition:transform 1.4s cubic-bezier(.22,1,.36,1)}
+.about-photo:hover img{transform:scale(1.04)}
+.about-body .sec-en{margin-bottom:24px}
+.about-name-en{
+  font-family:var(--serif-en);
+  font-size:34px;letter-spacing:.2em;
+  display:block;margin-bottom:6px;
+}
+.about-name-ja{
+  font-family:var(--serif-ja);font-weight:500;
+  font-size:15px;letter-spacing:.3em;color:var(--gray);
+  display:block;margin-bottom:36px;
+}
+.about-body p{font-size:14px;color:#4A4841;line-height:2.4;margin-bottom:22px}
+
+/* ---------- contact ---------- */
+.contact{text-align:center;padding:170px 48px}
+.contact .sec-ja{margin-bottom:34px}
+.contact p{
+  max-width:560px;margin:0 auto 56px;
+  font-size:14px;color:#4A4841;line-height:2.4;
+}
+.btn{
+  display:inline-block;
+  font-family:var(--serif-en);
+  font-size:14px;letter-spacing:.32em;text-indent:.32em;
+  padding:21px 74px;
+  border:1px solid var(--ink);
+  position:relative;overflow:hidden;
+  transition:color .5s ease;
+  z-index:1;
+}
+.btn::before{
+  content:'';position:absolute;inset:0;z-index:-1;
+  background:var(--ink);
+  transform:scaleX(0);transform-origin:right;
+  transition:transform .5s cubic-bezier(.22,1,.36,1);
+}
+.btn:hover{color:#FAF9F6}
+.btn:hover::before{transform:scaleX(1);transform-origin:left}
+
+/* ---------- footer ---------- */
+footer{
+  border-top:1px solid var(--line);
+  padding:44px 48px;
+  display:flex;justify-content:space-between;align-items:center;
+  font-family:var(--serif-en);
+  font-size:11px;letter-spacing:.25em;color:var(--gray);
+}
+footer .f-logo{font-size:14px;color:var(--ink)}
+
+/* ---------- responsive ---------- */
+@media(max-width:1024px){
+  .show-lead{max-width:300px}
+  .strength-list{grid-template-columns:1fr;gap:56px;max-width:520px}
+  .strength p{text-align:center}
+  .flow-list{grid-template-columns:1fr 1fr;max-width:640px}
+  .flow-item:not(:last-child)::after{display:none}
+}
+@media(max-width:768px){
+  header{padding:22px 24px}
+  header.scrolled{padding:14px 24px}
+  nav.pc{display:none}
+  .menu-btn{display:block}
+  section{padding:100px 24px}
+  .philosophy{padding-top:120px}
+  .svc-grid{grid-template-columns:1fr}
+  .svc{padding:48px 30px;border-right:none}
+  .svc:nth-last-child(-n+2){border-bottom:1px solid var(--line)}
+  .svc:last-child{border-bottom:none}
+  .about-wrap{grid-template-columns:1fr;gap:52px}
+  .about-photo{max-width:340px;margin:0 auto}
+  .contact{padding:120px 24px}
+  .btn{padding:19px 52px}
+  footer{flex-direction:column;gap:14px;text-align:center}
+}
+@media(max-width:768px){
+  .show-block{margin-bottom:88px}
+  .show-head{flex-wrap:wrap;gap:14px 20px}
+  .show-lead{margin-left:0;max-width:none;text-align:left}
+  .g-arch,.g-clinic,.g-exec,.g-hotel{grid-template-columns:1fr;grid-template-areas:none}
+  .g-arch .s1,.g-arch .s2,.g-arch .s3,
+  .g-clinic .s1,.g-clinic .s2,.g-clinic .s3,
+  .g-exec .s1,.g-exec .s2,.g-exec .s3,
+  .g-hotel .s1,.g-hotel .s2,.g-hotel .s3{grid-area:auto}
+  .g-arch .s2,.g-clinic .s1,.g-exec .s2,.g-hotel .s1{aspect-ratio:4/5}
+  .g-other{grid-template-columns:1fr}
+}
+@media(max-width:520px){
+  .flow-list{grid-template-columns:1fr;max-width:340px}
+}
+</style>
+</head>
+<body>
+
+<header id="header">
+  <a class="logo" href="#top">EMORIA</a>
+  <nav class="pc">
+    <ul>
+      <li><a href="#works">WORKS</a></li>
+      <li><a href="#services">SERVICES</a></li>
+      <li><a href="#flow">FLOW</a></li>
+      <li><a href="#about">ABOUT</a></li>
+      <li><a href="#contact">CONTACT</a></li>
+    </ul>
+  </nav>
+  <button class="menu-btn" id="menuBtn" aria-label="menu"><span></span><span></span></button>
+</header>
+
+<div class="overlay-nav" id="overlayNav">
+  <ul>
+    <li><a href="#works">WORKS</a></li>
+    <li><a href="#services">SERVICES</a></li>
+    <li><a href="#flow">FLOW</a></li>
+    <li><a href="#about">ABOUT</a></li>
+    <li><a href="#contact">CONTACT</a></li>
+  </ul>
+</div>
+
+<div class="hero" id="top">
+  <div class="hero-bg"></div>
+  <div class="hero-inner">
+    <h1 class="hero-title">EMORIA</h1>
+    <p class="hero-sub">BRAND PHOTOGRAPHY &amp; FILM</p>
+    <p class="hero-ja">事業を、美しく伝える。</p>
+  </div>
+  <div class="scroll-line"></div>
+</div>
+
+<section class="philosophy">
+  <div class="container">
+    <h2 class="phil-copy reveal">一日で、<br class="sp-only">ブランドのすべてを。</h2>
+    <p class="phil-text reveal">建築、クリニック、経営者、ホテル――。<br>事業の顔となる写真。SNSを動かすショートムービー。<br>想いを伝えるブランドフィルム。</p>
+    <p class="phil-text reveal">ウェブサイトから広告、採用まで、必要なビジュアルのすべてを、<br>たった一日の撮影でまとめてお届けします。<br>現場のご負担は最小限に。成果につながる素材を、確かなクオリティで。</p>
+  </div>
+</section>
+
+<section class="works" id="works">
+  <div class="container">
+    <div class="sec-head reveal">
+      <span class="sec-en">WORKS</span>
+      <h2 class="sec-ja">作品</h2>
+    </div>
+
+    <div class="show-block reveal">
+      <div class="show-head">
+        <span class="show-num">01</span>
+        <div class="show-title">
+          <span class="show-en">ARCHITECTURE</span>
+          <span class="show-ja">住宅・建築</span>
+        </div>
+        <p class="show-lead">素材の質感、光の移ろい、暮らしの気配まで。<br>一棟の価値を余さず写しとります。</p>
+      </div>
+      <div class="show-grid g-arch">
+        <figure class="s1" data-cap="ARCHITECTURE — 住宅・建築"><img src="assets/img/arch-interior.jpg" alt="住宅内観" loading="lazy"></figure>
+        <figure class="s2" data-cap="ARCHITECTURE — 住宅・建築"><img src="assets/img/arch-stair.jpg" alt="階段" loading="lazy"></figure>
+        <figure class="s3" data-cap="ARCHITECTURE — 住宅・建築"><img src="assets/img/arch-courtyard.jpg" alt="中庭のある家" loading="lazy"></figure>
+      </div>
+      <div class="show-more"><a href="architecture.html">VIEW GALLERY &rarr;</a></div>
+    </div>
+
+    <div class="show-block reveal">
+      <div class="show-head">
+        <span class="show-num">02</span>
+        <div class="show-title">
+          <span class="show-en">CLINIC</span>
+          <span class="show-ja">クリニック・医院</span>
+        </div>
+        <p class="show-lead">清潔感と信頼感、そして先生の人柄。<br>医院の空気そのものを伝えます。</p>
+      </div>
+      <div class="show-grid g-clinic">
+        <figure class="s1" data-cap="CLINIC — クリニック・医院"><img src="assets/img/clinic-doctor.jpg" alt="医師ポートレート" loading="lazy"></figure>
+        <figure class="s2" data-cap="CLINIC — クリニック・医院"><img src="assets/img/clinic-interior.jpg" alt="クリニック内装" loading="lazy"></figure>
+        <figure class="s3" data-cap="CLINIC — クリニック・医院"><img src="assets/img/clinic-treatment.jpg" alt="施術風景" loading="lazy"></figure>
+      </div>
+      <div class="show-more"><a href="clinic.html">VIEW GALLERY &rarr;</a></div>
+    </div>
+
+    <div class="show-block reveal">
+      <div class="show-head">
+        <span class="show-num">03</span>
+        <div class="show-title">
+          <span class="show-en">EXECUTIVE</span>
+          <span class="show-ja">経営者・著名人</span>
+        </div>
+        <p class="show-lead">語る言葉、働く背中、ふとした表情。<br>経営者の物語を一日かけて描きます。</p>
+      </div>
+      <div class="show-grid g-exec">
+        <figure class="s1" data-cap="EXECUTIVE — 経営者・著名人"><img src="assets/img/ceo-working.jpg" alt="経営者ドキュメンタリー" loading="lazy"></figure>
+        <figure class="s2" data-cap="EXECUTIVE — 経営者・著名人"><img src="assets/img/ceo-portrait.jpg" alt="経営者ポートレート" loading="lazy"></figure>
+        <figure class="s3" data-cap="EXECUTIVE — 経営者・著名人"><img src="assets/img/ceo-street.jpg" alt="街を歩く経営者" loading="lazy"></figure>
+      </div>
+      <div class="show-more"><a href="executive.html">VIEW GALLERY &rarr;</a></div>
+    </div>
+
+    <div class="show-block reveal">
+      <div class="show-head">
+        <span class="show-num">04</span>
+        <div class="show-title">
+          <span class="show-en">HOTEL / RYOKAN</span>
+          <span class="show-ja">ホテル・旅館</span>
+        </div>
+        <p class="show-lead">客室から料理、湯けむりまで。<br>泊まりたくなる世界観を隅々に。</p>
+      </div>
+      <div class="show-grid g-hotel">
+        <figure class="s1" data-cap="HOTEL / RYOKAN — ホテル・旅館"><img src="assets/img/hotel-food.jpg" alt="会席料理" loading="lazy"></figure>
+        <figure class="s2" data-cap="HOTEL / RYOKAN — ホテル・旅館"><img src="assets/img/hotel-room.jpg" alt="旅館客室" loading="lazy"></figure>
+        <figure class="s3" data-cap="HOTEL / RYOKAN — ホテル・旅館"><img src="assets/img/hotel-onsen.jpg" alt="露天風呂" loading="lazy"></figure>
+      </div>
+      <div class="show-more"><a href="hotel.html">VIEW GALLERY &rarr;</a></div>
+    </div>
+
+    <div class="show-block reveal">
+      <div class="show-head">
+        <span class="show-num">05</span>
+        <div class="show-title">
+          <span class="show-en">OTHER FIELDS</span>
+          <span class="show-ja">その他の撮影領域</span>
+        </div>
+        <p class="show-lead">採用、ウェディング、講座・広告素材。<br>用途に合わせて柔軟にご提案します。</p>
+      </div>
+      <div class="show-grid g-other">
+        <div class="wrap">
+          <figure data-cap="RECRUIT — 採用ブランディング"><img src="assets/img/recruit-team.jpg" alt="採用ブランディング" loading="lazy"></figure>
+          <span class="other-cap">RECRUIT<b>採用ブランディング撮影</b></span>
+        </div>
+        <div class="wrap">
+          <figure class="obj-top" data-cap="WEDDING — フォトウェディング"><img src="assets/img/wedding.jpg" alt="和装前撮り" loading="lazy"></figure>
+          <span class="other-cap">WEDDING<b>フォトウェディング</b></span>
+        </div>
+        <div class="wrap">
+          <figure data-cap="COURSE — 講座・広告素材"><img src="assets/img/lecture-studio.jpg" alt="スタジオ収録" loading="lazy"></figure>
+          <span class="other-cap">COURSE<b>講座・広告素材の一括撮影</b></span>
+        </div>
+      </div>
+      <div class="show-more"><a href="other.html">VIEW GALLERY &rarr;</a></div>
+    </div>
+  </div>
+</section>
+
+<section class="strength-sec">
+  <div class="container">
+    <div class="sec-head reveal">
+      <span class="sec-en">OUR APPROACH</span>
+      <h2 class="sec-ja">選ばれる理由</h2>
+    </div>
+    <div class="strength-list">
+      <div class="strength reveal">
+        <span class="num">01</span>
+        <div class="strength-line"></div>
+        <span class="en">ONE DAY</span>
+        <span class="ja">撮影は一日で完結</span>
+        <p>綿密な事前設計により、撮影は原則一日。営業を止めることなく、お客様の拘束時間を最小限に抑えます。</p>
+      </div>
+      <div class="strength reveal">
+        <span class="num">02</span>
+        <div class="strength-line"></div>
+        <span class="en">ALL IN ONE</span>
+        <span class="ja">写真も、動画も、まとめて</span>
+        <p>写真数十枚、縦型ショート動画、ブランドムービー、広告素材まで。窓口も納品も、すべてひとつに集約します。</p>
+      </div>
+      <div class="strength reveal">
+        <span class="num">03</span>
+        <div class="strength-line"></div>
+        <span class="en">FULL DIRECTION</span>
+        <span class="ja">企画から、丸ごとお任せ</span>
+        <p>「何を撮ればいいか」の段階からご一緒します。使われる場面から逆算し、カット表まで作り込んでご提案します。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="services" id="services">
+  <div class="container">
+    <div class="sec-head reveal">
+      <span class="sec-en">SERVICES</span>
+      <h2 class="sec-ja">撮影メニュー</h2>
+    </div>
+    <div class="svc-grid reveal">
+      <div class="svc">
+        <span class="num">01</span>
+        <span class="en">ARCHITECTURE</span>
+        <span class="ja">住宅・建築</span>
+        <p>工務店・ハウスメーカー・設計事務所さま向け。一棟の物件を、竣工写真から動画までまるごとブランド撮影。ウェブ・SNS・広告で長く働き続ける素材をお届けします。</p>
+        <div class="deliv"><span>竣工写真</span><span>縦型ショート動画</span><span>ブランドムービー</span><span>HP・広告素材</span></div>
+        <div class="svc-more"><a href="architecture.html">VIEW GALLERY &rarr;</a></div>
+      </div>
+      <div class="svc">
+        <span class="num">02</span>
+        <span class="en">CLINIC</span>
+        <span class="ja">クリニック・医院</span>
+        <p>美容クリニック・審美歯科・医院さま向け。院長・スタッフのポートレートから院内、施術風景まで、医院の信頼をかたちにする素材一式を一日で撮影します。</p>
+        <div class="deliv"><span>院長・スタッフ撮影</span><span>院内・施術風景</span><span>リール動画</span><span>ブランドムービー</span></div>
+        <div class="svc-more"><a href="clinic.html">VIEW GALLERY &rarr;</a></div>
+      </div>
+      <div class="svc">
+        <span class="num">03</span>
+        <span class="en">EXECUTIVE</span>
+        <span class="ja">経営者・著名人</span>
+        <p>経営者・士業・講師の方向けの一日密着パーソナルブランディング撮影。プロフィール写真からSNS用素材、ショート動画まで、発信のすべてを支えるビジュアルを。</p>
+        <div class="deliv"><span>プロフィール写真</span><span>密着ドキュメント</span><span>SNS素材</span><span>ショート動画</span></div>
+        <div class="svc-more"><a href="executive.html">VIEW GALLERY &rarr;</a></div>
+      </div>
+      <div class="svc">
+        <span class="num">04</span>
+        <span class="en">HOTEL / RYOKAN</span>
+        <span class="ja">ホテル・旅館</span>
+        <p>客室、料理、温泉、館内、スタッフ、周辺観光まで。宿の世界観を隅々まで写しとり、公式サイト・OTA・SNSで予約につながるビジュアルを制作します。</p>
+        <div class="deliv"><span>客室・館内</span><span>料理・温泉</span><span>縦型動画</span><span>ブランドムービー</span></div>
+        <div class="svc-more"><a href="hotel.html">VIEW GALLERY &rarr;</a></div>
+      </div>
+    </div>
+    <p class="svc-other reveal">その他、<a href="other.html"><b>採用ブランディング撮影</b></a> / <a href="other.html"><b>フォトウェディング</b></a> / <a href="other.html"><b>講座・広告素材の一括撮影</b></a> も承ります。</p>
+  </div>
+</section>
+
+<section class="flow-sec" id="flow">
+  <div class="container">
+    <div class="sec-head reveal">
+      <span class="sec-en">FLOW</span>
+      <h2 class="sec-ja">ご依頼の流れ</h2>
+    </div>
+    <div class="flow-list reveal">
+      <div class="flow-item">
+        <div class="dot"></div>
+        <span class="num">01</span>
+        <span class="en">CONTACT</span>
+        <span class="ja">お問い合わせ</span>
+        <p>フォームよりお気軽にご相談ください。オンラインでの無料相談も承っております。</p>
+      </div>
+      <div class="flow-item">
+        <div class="dot"></div>
+        <span class="num">02</span>
+        <span class="en">PLANNING</span>
+        <span class="ja">ヒアリング・設計</span>
+        <p>素材が使われる場面・媒体から逆算し、撮影内容をカット表まで作り込んでご提案します。</p>
+      </div>
+      <div class="flow-item">
+        <div class="dot"></div>
+        <span class="num">03</span>
+        <span class="en">SHOOTING</span>
+        <span class="ja">撮影（一日）</span>
+        <p>事前設計に沿って、必要なカットを一日ですべて撮影。現場のご負担を最小限に。</p>
+      </div>
+      <div class="flow-item">
+        <div class="dot"></div>
+        <span class="num">04</span>
+        <span class="en">DELIVERY</span>
+        <span class="ja">編集・納品</span>
+        <p>レタッチ・編集を施し、写真・動画・素材一式を納品。公開までサポートします。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="about" id="about">
+  <div class="about-wrap">
+    <div class="about-photo reveal">
+      <img src="assets/img/photographer.jpg" alt="鈴木佑弥" loading="lazy">
+    </div>
+    <div class="about-body reveal">
+      <span class="sec-en" style="text-align:left;text-indent:0">PHOTOGRAPHER / DIRECTOR</span>
+      <span class="about-name-en">YUYA SUZUKI</span>
+      <span class="about-name-ja">鈴木 佑弥</span>
+      <p>フォトグラファー・映像ディレクター。建築、クリニック、ホテル、経営者のブランディング撮影を専門に、写真と映像をワンストップで手がける。</p>
+      <p>信条は、「撮って終わり」にしないこと。ウェブサイト、SNS、広告、採用――ビジュアルが実際に使われる場面から逆算して撮影を設計し、事業の成果につながる素材づくりを追求している。</p>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="container">
+    <div class="sec-head reveal" style="margin-bottom:34px">
+      <span class="sec-en">CONTACT</span>
+      <h2 class="sec-ja">撮影のご相談・お見積もり</h2>
+    </div>
+    <p class="reveal">案件のご相談、撮影内容や納品物についてのご質問など、<br>お気軽にお問い合わせください。二営業日以内にご返信いたします。</p>
+    <a class="btn reveal" href="mailto:yuu83773@gmail.com">GET IN TOUCH</a>
+  </div>
+</section>
+
+<footer>
+  <span class="f-logo">EMORIA</span>
+  <span>&copy; 2026 EMORIA. ALL RIGHTS RESERVED.</span>
+</footer>
+
+<div class="lightbox" id="lightbox">
+  <button class="lb-close" id="lbClose">CLOSE</button>
+  <button class="lb-arrow lb-prev" id="lbPrev">&#8592;</button>
+  <img id="lbImg" src="" alt="">
+  <button class="lb-arrow lb-next" id="lbNext">&#8594;</button>
+  <span class="lb-cap" id="lbCap"></span>
+</div>
+
+<script>
+// header scroll
+const header=document.getElementById('header');
+window.addEventListener('scroll',()=>{
+  header.classList.toggle('scrolled',window.scrollY>window.innerHeight*0.7);
+},{passive:true});
+
+// mobile menu
+const menuBtn=document.getElementById('menuBtn');
+const overlayNav=document.getElementById('overlayNav');
+menuBtn.addEventListener('click',()=>{
+  const open=overlayNav.classList.toggle('open');
+  document.body.classList.toggle('menu-open',open);
+});
+overlayNav.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{
+  overlayNav.classList.remove('open');
+  document.body.classList.remove('menu-open');
+}));
+
+// reveal on scroll
+const io=new IntersectionObserver(entries=>{
+  entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}});
+},{threshold:0.12});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+
+// lightbox
+const figures=[...document.querySelectorAll('.show-grid figure')];
+const lightbox=document.getElementById('lightbox');
+const lbImg=document.getElementById('lbImg');
+const lbCap=document.getElementById('lbCap');
+let currentList=[],currentIdx=0;
+function openLb(fig){
+  currentList=figures;
+  currentIdx=currentList.indexOf(fig);
+  showLb();
+  lightbox.classList.add('open');
+  document.body.style.overflow='hidden';
+}
+function showLb(){
+  const fig=currentList[currentIdx];
+  lbImg.src=fig.querySelector('img').src;
+  lbCap.textContent=fig.dataset.cap||'';
+}
+function closeLb(){
+  lightbox.classList.remove('open');
+  document.body.style.overflow='';
+}
+figures.forEach(f=>f.addEventListener('click',()=>openLb(f)));
+document.getElementById('lbClose').addEventListener('click',closeLb);
+document.getElementById('lbPrev').addEventListener('click',e=>{e.stopPropagation();currentIdx=(currentIdx-1+currentList.length)%currentList.length;showLb()});
+document.getElementById('lbNext').addEventListener('click',e=>{e.stopPropagation();currentIdx=(currentIdx+1)%currentList.length;showLb()});
+lightbox.addEventListener('click',e=>{if(e.target===lightbox)closeLb()});
+document.addEventListener('keydown',e=>{
+  if(!lightbox.classList.contains('open'))return;
+  if(e.key==='Escape')closeLb();
+  if(e.key==='ArrowLeft'){currentIdx=(currentIdx-1+currentList.length)%currentList.length;showLb()}
+  if(e.key==='ArrowRight'){currentIdx=(currentIdx+1)%currentList.length;showLb()}
+});
+</script>
+</body>
+</html>

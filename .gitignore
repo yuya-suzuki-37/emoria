@@ -1,0 +1,11 @@
+# AI生成の原本PNG（公開はWeb最適化済みJPEGのみ）
+assets/img/*.png
+
+# 内部制作ファイル（サイト表示に不要）
+prompts/
+logs/
+logs-test.log
+scripts/
+gen-all-codex.sh
+README.md
+.DS_Store

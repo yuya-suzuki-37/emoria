@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ARCHITECTURE | EMORIA</title>
+<meta name="description" content="住宅・建築のブランド撮影ギャラリー。工務店・ハウスメーカー・設計事務所向けに、竣工写真から動画まで一日でまるごと撮影します。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500&family=Shippori+Mincho:wght@400;500;600&family=Zen+Kaku+Gothic+New:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/gallery.css">
+</head>
+<body>
+
+<header>
+  <a class="logo" href="index.html">EMORIA</a>
+  <nav class="pc">
+    <ul>
+      <li><a href="index.html#works">WORKS</a></li>
+      <li><a href="index.html#services">SERVICES</a></li>
+      <li><a href="index.html#flow">FLOW</a></li>
+      <li><a href="index.html#about">ABOUT</a></li>
+      <li><a href="index.html#contact">CONTACT</a></li>
+    </ul>
+  </nav>
+  <button class="menu-btn" id="menuBtn" aria-label="menu"><span></span><span></span></button>
+</header>
+
+<div class="overlay-nav" id="overlayNav">
+  <ul>
+    <li><a href="index.html#works">WORKS</a></li>
+    <li><a href="index.html#services">SERVICES</a></li>
+    <li><a href="index.html#flow">FLOW</a></li>
+    <li><a href="index.html#about">ABOUT</a></li>
+    <li><a href="index.html#contact">CONTACT</a></li>
+  </ul>
+</div>
+
+<div class="pg-hero" style="margin-top:57px">
+  <img src="assets/img/hero-architecture.jpg" alt="住宅・建築の撮影">
+</div>
+
+<div class="pg-head">
+  <span class="pg-crumb"><a href="index.html">TOP</a> / <a href="index.html#works">WORKS</a> / 01</span>
+  <h1>
+    <span class="pg-title-en">ARCHITECTURE</span>
+    <span class="pg-title-ja">住宅・建築</span>
+  </h1>
+  <p class="pg-lead">工務店・ハウスメーカー・設計事務所さまへ。竣工の一瞬に、その家が持つ物語のすべてを。素材の質感、光の移ろい、暮らしの気配まで、丁寧に写しとります。</p>
+</div>
+
+<div class="pg-gallery">
+  <div class="pg-grid">
+    <figure class="w7 reveal" data-cap="ARCHITECTURE — 住宅・建築"><img src="assets/img/arch-interior.jpg" alt="吹き抜けリビング" loading="lazy"></figure>
+    <figure class="w5 reveal" data-cap="ARCHITECTURE — 住宅・建築"><img src="assets/img/arch-stair.jpg" alt="浮き階段" loading="lazy"></figure>
+    <figure class="w5 reveal" data-cap="ARCHITECTURE — 住宅・建築"><img src="assets/img/arch-bedroom.jpg" alt="寝室" loading="lazy"></figure>
+    <figure class="w7 reveal" data-cap="ARCHITECTURE — 住宅・建築"><img src="assets/img/arch-exterior-day.jpg" alt="昼の外観" loading="lazy"></figure>
+    <figure class="w6 reveal" data-cap="ARCHITECTURE — 住宅・建築"><img src="assets/img/arch-kitchen.jpg" alt="キッチン" loading="lazy"></figure>
+    <figure class="w6 reveal" data-cap="ARCHITECTURE — 住宅・建築"><img src="assets/img/arch-courtyard.jpg" alt="中庭" loading="lazy"></figure>
+  </div>
+</div>
+
+<section class="pg-svc">
+  <div class="pg-svc-inner reveal">
+    <span class="sec-en">PACKAGE</span>
+    <h2>1物件まるごとブランド撮影</h2>
+    <p>完成見学会の集客、施工事例ページ、SNS運用、広告クリエイティブ。一度の撮影で、営業活動のすべてに使える素材をまとめてお届けします。</p>
+    <div class="deliv">
+      <span>竣工写真 50〜100枚</span><span>縦型ショート動画</span><span>ブランドムービー</span><span>HP用素材</span><span>Instagram用素材</span><span>広告用素材</span>
+    </div>
+  </div>
+</section>
+
+<a class="next-nav" href="clinic.html">
+  <img src="assets/img/clinic-interior.jpg" alt="次: クリニック・医院">
+  <div class="next-inner">
+    <span class="next-label">NEXT</span>
+    <span class="next-title">02 — CLINIC</span>
+    <span class="next-ja">クリニック・医院</span>
+  </div>
+</a>
+
+<section class="contact">
+  <h2 class="reveal">住宅・建築の撮影について相談する</h2>
+  <p class="reveal">物件の規模やご希望の納品物に合わせて、最適な撮影プランをご提案します。<br>お気軽にお問い合わせください。</p>
+  <a class="btn reveal" href="mailto:yuu83773@gmail.com">GET IN TOUCH</a>
+</section>
+
+<footer>
+  <span class="f-logo">EMORIA</span>
+  <span>&copy; 2026 EMORIA. ALL RIGHTS RESERVED.</span>
+</footer>
+
+<div class="lightbox" id="lightbox">
+  <button class="lb-close" id="lbClose">CLOSE</button>
+  <button class="lb-arrow lb-prev" id="lbPrev">&#8592;</button>
+  <img id="lbImg" src="" alt="">
+  <button class="lb-arrow lb-next" id="lbNext">&#8594;</button>
+  <span class="lb-cap" id="lbCap"></span>
+</div>
+
+<script src="assets/gallery.js"></script>
+</body>
+</html>

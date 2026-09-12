@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>HOTEL / RYOKAN | EMORIA</title>
+<meta name="description" content="ホテル・旅館のブランド撮影ギャラリー。客室・料理・温泉・館内・おもてなしまで、予約につながる世界観を一日で撮影します。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500&family=Shippori+Mincho:wght@400;500;600&family=Zen+Kaku+Gothic+New:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/gallery.css">
+</head>
+<body>
+
+<header>
+  <a class="logo" href="index.html">EMORIA</a>
+  <nav class="pc">
+    <ul>
+      <li><a href="index.html#works">WORKS</a></li>
+      <li><a href="index.html#services">SERVICES</a></li>
+      <li><a href="index.html#flow">FLOW</a></li>
+      <li><a href="index.html#about">ABOUT</a></li>
+      <li><a href="index.html#contact">CONTACT</a></li>
+    </ul>
+  </nav>
+  <button class="menu-btn" id="menuBtn" aria-label="menu"><span></span><span></span></button>
+</header>
+
+<div class="overlay-nav" id="overlayNav">
+  <ul>
+    <li><a href="index.html#works">WORKS</a></li>
+    <li><a href="index.html#services">SERVICES</a></li>
+    <li><a href="index.html#flow">FLOW</a></li>
+    <li><a href="index.html#about">ABOUT</a></li>
+    <li><a href="index.html#contact">CONTACT</a></li>
+  </ul>
+</div>
+
+<div class="pg-hero" style="margin-top:57px">
+  <img src="assets/img/hotel-room.jpg" alt="ホテル・旅館の撮影">
+</div>
+
+<div class="pg-head">
+  <span class="pg-crumb"><a href="index.html">TOP</a> / <a href="index.html#works">WORKS</a> / 04</span>
+  <h1>
+    <span class="pg-title-en">HOTEL / RYOKAN</span>
+    <span class="pg-title-ja">ホテル・旅館</span>
+  </h1>
+  <p class="pg-lead">ホテル・旅館・宿泊施設さまへ。旅は、写真から始まっています。客室、料理、温泉、館内、スタッフのおもてなしまで。泊まりたくなる世界観を、隅々まで写しとります。</p>
+</div>
+
+<div class="pg-gallery">
+  <div class="pg-grid">
+    <figure class="w5 reveal" data-cap="HOTEL / RYOKAN — ホテル・旅館"><img src="assets/img/hotel-food.jpg" alt="会席料理" loading="lazy"></figure>
+    <figure class="w7 reveal" data-cap="HOTEL / RYOKAN — ホテル・旅館"><img src="assets/img/hotel-lobby.jpg" alt="ロビーラウンジ" loading="lazy"></figure>
+    <figure class="w7 reveal" data-cap="HOTEL / RYOKAN — ホテル・旅館"><img src="assets/img/hotel-breakfast.jpg" alt="朝食" loading="lazy"></figure>
+    <figure class="w5 reveal" data-cap="HOTEL / RYOKAN — ホテル・旅館"><img src="assets/img/hotel-entrance.jpg" alt="玄関" loading="lazy"></figure>
+    <figure class="w12 reveal" data-cap="HOTEL / RYOKAN — ホテル・旅館"><img src="assets/img/hotel-onsen.jpg" alt="露天風呂" loading="lazy"></figure>
+  </div>
+</div>
+
+<section class="pg-svc">
+  <div class="pg-svc-inner reveal">
+    <span class="sec-en">PACKAGE</span>
+    <h2>HOTEL BRANDING PACKAGE</h2>
+    <p>公式サイト、OTA（予約サイト）、SNS、パンフレット。予約単価を支えるビジュアルを、営業を止めることなく撮影します。</p>
+    <div class="deliv">
+      <span>客室・館内</span><span>料理・温泉</span><span>スタッフ・おもてなし</span><span>周辺観光</span><span>縦型動画</span><span>ブランドムービー</span>
+    </div>
+  </div>
+</section>
+
+<a class="next-nav" href="other.html">
+  <img src="assets/img/wedding-dress.jpg" alt="次: その他の撮影領域">
+  <div class="next-inner">
+    <span class="next-label">NEXT</span>
+    <span class="next-title">05 — OTHER FIELDS</span>
+    <span class="next-ja">採用・ウェディング・講座</span>
+  </div>
+</a>
+
+<section class="contact">
+  <h2 class="reveal">宿泊施設の撮影について相談する</h2>
+  <p class="reveal">館の規模や稼働状況に合わせて、営業に影響の少ない撮影計画をご提案します。<br>お気軽にお問い合わせください。</p>
+  <a class="btn reveal" href="mailto:yuu83773@gmail.com">GET IN TOUCH</a>
+</section>
+
+<footer>
+  <span class="f-logo">EMORIA</span>
+  <span>&copy; 2026 EMORIA. ALL RIGHTS RESERVED.</span>
+</footer>
+
+<div class="lightbox" id="lightbox">
+  <button class="lb-close" id="lbClose">CLOSE</button>
+  <button class="lb-arrow lb-prev" id="lbPrev">&#8592;</button>
+  <img id="lbImg" src="" alt="">
+  <button class="lb-arrow lb-next" id="lbNext">&#8594;</button>
+  <span class="lb-cap" id="lbCap"></span>
+</div>
+
+<script src="assets/gallery.js"></script>
+</body>
+</html>
