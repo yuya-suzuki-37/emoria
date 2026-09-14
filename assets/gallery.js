@@ -50,3 +50,21 @@ if(lightbox&&figures.length){
     if(e.key==='ArrowRight'){currentIdx=(currentIdx+1)%figures.length;showLb()}
   });
 }
+
+// before/after slider
+document.querySelectorAll('.ba').forEach(ba=>{
+  const after=ba.querySelector('.ba-after');
+  const handle=ba.querySelector('.ba-handle');
+  function setPos(clientX){
+    const r=ba.getBoundingClientRect();
+    let p=(clientX-r.left)/r.width*100;
+    p=Math.max(2,Math.min(98,p));
+    after.style.clipPath=`inset(0 0 0 ${p}%)`;
+    handle.style.left=p+'%';
+  }
+  let dragging=false;
+  ba.addEventListener('pointerdown',e=>{dragging=true;ba.setPointerCapture(e.pointerId);setPos(e.clientX)});
+  ba.addEventListener('pointermove',e=>{if(dragging)setPos(e.clientX)});
+  ba.addEventListener('pointerup',()=>{dragging=false});
+  ba.addEventListener('pointercancel',()=>{dragging=false});
+});

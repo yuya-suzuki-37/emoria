@@ -1,0 +1,32 @@
+Built-in image_gen: generation prompt
+
+Use case: photorealistic-natural.
+Asset type: A realistic disappointing BEFORE photo for an office recruitment photography comparison.
+Generate one landscape photograph, exactly 1536 x 1024 pixels, 3:2 aspect ratio.
+Primary request: An unoccupied ordinary office, casually photographed by an amateur with a smartphone for a quick internal record before hiring a professional photographer. Nobody is present anywhere, including reflections. The image fails to communicate any workplace appeal or human warmth.
+Scene: cramped everyday office desks with a plausible casual mess: loosely piled blank papers, plain unmarked folders, mundane stationery, a used plain mug, tangled charging and computer cables, an exposed power strip, mismatched chairs partly pushed out. Several computer monitors are still powered on, displaying plain muted blue or gray screens with absolutely no text, icons, logos or UI. Desks and chair edges are carelessly cut off by the picture edges. Ordinary off-white walls and ceiling fluorescent fixtures.
+Style: convincingly mundane amateur smartphone snapshot, unstyled, unpolished, accidentally awkward framing; modest approximately 3 degree camera tilt, slightly careless standing-height viewpoint, no thoughtfully composed focal point. Everyday lived-in clutter, incidental objects intruding into the frame. It must never look like professional office photography, a stock photo, interior architecture photography, or a staged scene.
+Lighting: flat overhead fluorescent illumination with visible dull green-yellow white-balance cast, weak tonal separation and minimal dimensional shadows. Dull natural colors. No attractive window light, no dramatic lighting, no cinematic grade, no studio lighting.
+Image quality: retain clear native resolution and recognizable surface details; at most slight ordinary phone noise and minimal softness, no heavy blur or motion blur, no artificial damage or vintage effects. No shallow depth of field, no bokeh. Ordinary believable office, not abandoned, not ruined, not a garbage dump.
+Strict constraints: absolutely no writing, letters, numbers, readable or pseudo text, logos, brand marks, signage, captions, watermarks, or BEFORE label anywhere, including monitor bezels, screens, keyboards, papers, stationery and walls. Blank or unmarked objects and keys. One photo only, no collage, no borders.
+
+
+Edit prompt 1
+
+Use case: precise-object-edit.
+Edit the supplied office photograph. Keep the entire photograph, framing, 1536 x 1024 pixel landscape dimensions, camera tilt, fluorescent yellow-green cast, flat dull lighting, desks, messy cables, chairs, blank blue monitor screens, objects, textures and amateur phone photo appearance unchanged.
+Change only this: remove EVERY visible letter, number, text-like mark, brand logo, label or writing, replacing it with the natural blank underlying material. In particular erase the small white brand lettering in the center of the bottom bezel of the middle monitor; erase the oval badge at the bottom of the right monitor and any logos on the left monitor; erase the tiny brand plaques and marks at the top of the filing cabinet; remove all writing and lines on the small framed paper leaning against the back wall so it is simply blank paper; erase the sticker and writing under the central chair; remove all folder spine text or labels, cardboard box white writing, any marks on the power strip, and all writing on loose papers. All keyboard keys must be blank, unprinted plastic without letters, numerals or symbols. Keep the keyboards present. Plain paper, plain blank bezel plastic, plain blank folder spines. Absolutely no text, pseudo-text, logos, watermarks or branding anywhere in the result. Do not add or remove other objects. Preserve detailed resolution and mundane amateur realism.
+
+
+Edit prompt 2
+
+Edit only the remaining text-like markings in this photo; preserve everything else exactly, including image dimensions 1536x1024, amateur office snapshot style, camera tilt, clutter, fluorescent color cast, and lighting. Three specific cleanup locations:
+1. Filing cabinet, upper lip directly underneath plant pots at approximately x480-547, y292-309: replace the two small dark marking clusters with completely plain smooth cabinet metal matching its surroundings, with no emblems or marks left.
+2. Foreground desk, small sheet between the left monitor base and pencil cup, behind the mug at approximately x204-287, y786-839: remove the scribble and make the entire visible sheet blank white paper.
+3. Central desk vertical leg just left of the central chair at approximately x633-658, y591-630: remove the small printed sticker completely, leaving plain gray metal.
+Also remove any remaining tiny text-like printed marks or labels on stationery items and objects. All visible surfaces must have zero writing and zero logos. Do not simplify the clutter, straighten the angle, improve the lighting, change the scene, blur the image or add any content.
+
+
+Edit prompt 3
+
+In the input office image, replace the tall filing cabinet under the green plant (left of center) with an otherwise identical plain unbranded cabinet. Its very top front metal strip currently contains TWO small dark rectangular insignias (one near the left edge, one farther right). DELETE both dark insignias and their rectangular outlines. That entire top front strip must be completely smooth uninterrupted light olive-gray metal with absolutely no dark marks, no rectangles, no badge recess, no holes, no symbols, no letters, no numerals. Also no logos or text on any other cabinet surfaces. Cabinet position and dimensions, plant, drawers, handles, light, colors, and EVERY other part of the photo must stay the same. Keep 1536x1024 landscape. Do not alter framing or clutter. Output one image.

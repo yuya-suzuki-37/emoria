@@ -1,0 +1,16 @@
+Method: built-in image_gen (generation and targeted cleanup)
+
+GENERATION PROMPT
+Use case: photorealistic-natural
+Asset type: a single professional behind-the-scenes commercial photograph.
+Generate a horizontal landscape image, exactly 1536 x 1024 pixels, 3:2 composition.
+
+Scene and primary subject: Inside a real filming studio, a Japanese female instructor and a male cameraman are seen from behind, standing close together and attentively checking a production monitor. A natural candid moment during a lecture video shoot. Their backs and subtle partial side profiles are visible; their attention is on the screen. The instructor wears understated professional clothing; the cameraman wears practical dark clothing. Their relaxed posture conveys a serious but warm, collegial production atmosphere.
+Monitor: Clearly visible between them, showing a photographic video frame of the female instructor presenting during the recording, matching her hair and clothing. The screen shows ONLY the filmed image, completely clean: no interface, no recording letters, no timecode, no numbers, no subtitles or symbols.
+Environment: believable professional camera equipment on a tripod, a studio light with diffusion and unobtrusive stands in the background, authentic filming studio depth. Unbranded equipment.
+Composition: eye-level candid medium-wide view from behind the two collaborators; both people and the monitor are the visual focus, natural perspective, balanced framing. Physically plausible anatomy and equipment.
+Photographic quality: indistinguishable from a real high-end commercial editorial photo, magazine publication quality, medium-format camera texture and tonal depth, natural fine detail in hair, fabric and visible skin, gentle lens depth of field while keeping the monitor legible as an image. Refined natural color grading, soft cinematic lighting, warm studio lights, soft realistic shadows, restrained highlights and authentic material textures.
+Absolute constraints: no text, no letters, no numbers, no logos, no brand marks, no watermark, no typography anywhere, including equipment and the monitor. No illustration, no CGI or 3D-render appearance, no plastic skin, no excessive glossy AI sheen, no aggressive HDR, no artificial oversharpening.
+
+FINAL CLEANUP PROMPT
+Use case: precise-object-edit. Edit this photograph with exactly one small correction: remove ALL tiny white/gray lettering, numbers, brand markings, engraved symbols and text-like marks from the central tripod head and its controls beneath the monitor, including the tiny white inscription at approximately x=801,y=810 and the tiny markings below the monitor at approximately x=718,y=640. Replace these markings with the same plain matte black metal surface as their surroundings, matching the original natural texture and shading. No text or logos anywhere. Preserve EVERYTHING ELSE exactly: the two people's backs and poses, the monitor's clean video image, equipment geometry, clothing, hair, composition, studio, warm soft lighting, color grading and authentic photographic texture. Do not crop or change the image framing. Keep the output at exactly 1536 x 1024 pixels, horizontal landscape. Do not add lettering, numbers, logos, watermarks or any new objects.
