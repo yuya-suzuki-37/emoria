@@ -1,0 +1,24 @@
+Tool: built-in image_gen
+Final asset: assets/img/before-course.png
+Dimensions: 1536x1024
+Reference image (identity only): assets/img/lecture-studio.png
+
+GENERATION PROMPT
+Use case: photorealistic-natural.
+Generate one landscape image, exactly 1536 x 1024 pixels, a raw-looking frame captured by an ordinary laptop's built-in webcam during a solo home lecture livestream.
+
+REFERENCE ROLE: The supplied image is ONLY a reference for the female lecturer's identity, face, hairstyle and similar clothing. Preserve this exact woman's recognizable facial features, apparent age, short dark side-parted bob haircut, and ivory V-neck blouse. Completely replace the location, composition, lighting, pose and situation. Do not carry over any studio elements.
+
+NEW SCENE: She is alone, seated at a desk in a cramped, lived-in room in her home, leaning toward the laptop's built-in webcam and speaking naturally, her lips slightly parted mid-sentence. She looks toward the webcam lens. We see the actual webcam feed from the laptop screen's camera position, slightly below her face with a mild upward angle and ordinary wide-angle webcam perspective; a close head-and-shoulders framing with her face near the lens. The laptop is the capture device, outside the image, not an external observer's view of a computer. Her recognizable face should remain clear enough for identity matching.
+
+BACKGROUND: Close ordinary walls, a crowded home bookshelf with plain unlettered book spines and household items, closed curtains, and everyday clothing left hanging on hooks or the back of a chair. Small domestic room, visually cluttered and unstyled. Background has webcam depth of field, no cinematic blur.
+
+LIGHT AND IMAGE QUALITY: Only the ordinary ceiling fluorescent room light illuminates her. Flat, dull overhead lighting, a slightly cool fluorescent cast, visible unflattering shadows below brows, nose and chin, no front fill light and no screen glow as a second source. Modest webcam fidelity: somewhat soft detail, subdued contrast and colors, mild digital sensor noise and slight compression character. Keep her face recognizable. An everyday amateur home livestream frame, not professional photography.
+
+ABSOLUTE EXCLUSIONS: Exactly one person. No studio, no cinema camera, no external camera, no camera rig, no tripod, no softbox, no ring light, no lighting equipment, no microphone equipment, no film crew, no photographer, no other staff, no warm decorative studio lighting, no cinematic grading, no beauty lighting. Absolutely no text, letters, numbers, logos, watermarks, captions, borders, call controls or any UI overlays anywhere; books and objects must be unlettered.
+
+FINAL REFINEMENT PROMPT
+Edit this generated home webcam image with one precise change: remove absolutely every text-like marking, glyph, letter, number and label from all book spines, book covers, binders, containers and background objects. Make EVERY book spine and binder a completely blank, solid muted-color surface, without strokes, tiny line patterns or label rectangles. Preserve the bookshelf and domestic clutter, but make all objects fully unlettered. There must be absolutely no text or text-like markings anywhere.
+
+Preserve everything else as closely as possible: the exact same woman's face and recognizable facial identity, hairstyle, facial expression, pose, ivory blouse, close webcam viewpoint from slightly below, framing, bookshelf positions, curtains, hanging clothes, cramped domestic room, overhead ceiling fluorescent light, dull cool flat webcam lighting with facial shadows, mild digital noise, soft webcam quality, background depth of field. Do not beautify or add cinematic lighting. No studio equipment, cameras, tripods, lighting equipment, crew, other people, logos, watermarks, captions or UI overlays. Keep output exactly 1536x1024 pixels, landscape PNG.
+

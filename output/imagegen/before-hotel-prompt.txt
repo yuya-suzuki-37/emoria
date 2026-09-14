@@ -1,0 +1,16 @@
+Tool: built-in image_gen
+Edit target: assets/img/hotel-room.png
+Output: assets/img/before-hotel.png
+
+Use case: lighting-weather.
+Input image 1 is the edit target, a professionally photographed Japanese ryokan suite. EDIT THIS EXACT PHOTOGRAPH into the unflattering BEFORE image of a Before/After photography comparison. Create one photorealistic landscape PNG, exactly 1536 x 1024 pixels, 3:2.
+
+MOST IMPORTANT: preserve the identity and layout of this exact room and almost exactly the existing camera viewpoint, framing, perspective, and object positions. Keep the same tatami seams, wood ceiling and beams, upper wooden lattice, shoji panel grids, open garden doorway at left-center, right recessed sitting area and its wall panel, dark low table and its placemat and bowl, both floor chairs, right sofa with its cushions and small side stool, floor lantern at left, hanging lamp at right, and veranda furniture. Do not redesign or redecorate the room, move furniture, add windows, close the doorway, change the number of panels, or add people.
+
+Change photographic quality: make this look like a casual disappointing hotel booking-listing record shot taken by a staff member with a phone wide-angle camera. Remove all warm amber accent illumination and artistic lighting; existing floor and hanging lamps stay physically present but switched OFF, and all spot/accent lighting is off. The interior is lit by flat, unattractive overhead fluorescent ceiling illumination with a noticeable but plausible pale yellow-green white-balance cast. No dramatic chiaroscuro, no golden glow, no cinematic toning. Lift the dark interior into mundane, washed-out, fairly evenly exposed flat room lighting while retaining visible texture in wood and tatami. The light can originate above/outside the frame; preserve the existing ceiling architecture.
+
+Outside the same open garden doorway, drastically clip highlights to nearly solid featureless overexposed white: the garden must not be visible or recoverable, with only the existing veranda furniture and immediate threshold still recognizable at the lower part. Keep the original doorway boundaries and shoji geometry.
+
+Add subtle smartphone wide-angle barrel distortion and edge stretching, with a very slight roughly 1-degree careless handheld tilt and imperfect framing while preserving near alignment with the source. Retain high resolution and fine texture; only very light handheld softness and mild phone noise, no strong blur or pixelation. Add a small unbranded plain electric hot-water pot and a couple of modest guest amenities, such as a plain tissue box and small remote, casually set at a free edge of the existing low table without moving or replacing its bowl and placemat. Modest everyday clutter only.
+
+This must look convincingly like the SAME lovely room badly photographed, an ordinary amateur documentation snapshot, with an unmistakable photographic-quality difference from the supplied polished professional image. No text, letters, numbers, labels, logos, watermarks, frames, borders, split screens or comparison captions.

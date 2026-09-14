@@ -1,0 +1,26 @@
+Method: built-in image_gen; reference-image editing only. No PIL or CSS.
+Reference: assets/img/arch-interior.png
+Output: assets/img/before-arch.png
+
+Initial edit prompt:
+Use case: style-transfer.
+Asset type: Before-side image for a photographic Before/After comparison.
+Input image: the provided living room photograph is the EDIT TARGET. Transform this exact photo; do not invent a different room.
+Output: a single photorealistic landscape PNG, exactly 1536 x 1024 pixels, aspect ratio 3:2.
+
+Primary request: Make this professional architectural photograph look like an ordinary homeowner's unpolished smartphone record photo after moving in. The most important requirement is preserving the identical place, subjects, and nearly identical angle and framing.
+
+Strict invariants: Preserve the double-height living room's exact architecture, proportions, central tall cream chimney breast and unlit black fireplace, hearth bench, upper left glass balustrade, pillars and openings, left dining area and dining furniture, the right recessed wood reading nook with chair and shelving, the full-height right windows and exact dark mullion arrangement, curtains, wood floor, and rug. Keep the left beige sofa, cushions and draped throw, the central wooden coffee table with its same vase, branches, bowl and books, both curved upholstered chairs at lower right, and side lamp all in their exact existing locations. No people, same as reference. Preserve all existing furniture and decorations.
+
+Change the photographic treatment: Remove all golden-hour direct sunbeams and dramatic sun patches and tree shadows from the central wall, floor and furniture. Interior is lit only by mundane overhead ceiling lighting, a flat, somewhat dull and uneven household illumination with a noticeable but plausible yellow-green fluorescent white-balance cast. Do not add pendant fixtures or change the ceiling geometry; the overhead light source can be above the crop. The table lamp stays off. Bright exterior window glazing is almost entirely clipped to white with just very faint washed-out foliage in a few places; preserve every window frame. No balanced HDR or exposure blending. Slightly muddy interior midtones, ordinary phone auto-exposure, restrained fine sensor noise and mild oversharpening. Keep high resolution and recognizable material detail, only negligible hand-motion softness. The photo should not look professional, cinematic, beautifully lit, or artistically graded.
+Framing: Match the original view extremely closely, allow only approximately 0.7 degree handheld roll and tiny imperfect edge crop. Do not shift viewpoint or restage furniture.
+Small lived-in additions: Add two small plain unprinted cardboard moving boxes on the floor near the left passage, and one ordinary unbranded stick vacuum resting near that passage. Keep these additions modest and out of the main furniture silhouettes. No clutter elsewhere.
+Absolutely no text, letters, numbers, labels, logos, watermarks, borders, overlays, split-screen, or before/after captions.
+
+Final refinement prompt (applied to initial generated edit):
+Use case: style-transfer. Edit this image with one targeted correction: make the camera capture unmistakably an unpolished ordinary homeowner smartphone snapshot, keeping every architectural feature and object exactly as it is. It currently still looks too professionally straight and clean.
+Output exactly 1536 x 1024 landscape PNG.
+Preserve this precise room, exact camera position and perspective, double-height structure, fireplace, window frames, all furniture, decorations, the existing cardboard boxes and vacuum in their exact positions. Do not move, add or remove any objects or redesign anything.
+Apply about 0.8 degree clockwise handheld camera roll to the entire view, with minimal incidental cropping. The vertical chimney edges and window mullions should lean very slightly, perceptible but subtle. Keep nearly the same framing.
+Use flat household overhead ceiling illumination only. Keep the ceiling lights on and table lamp off. Keep the exterior windows strongly blown out white, with nearly no exterior detail. No sun shafts, no dramatic shadow patterns. Add a plausible mild yellow-green fluorescent white balance error throughout the interior. Make interior midtones slightly dull and underexposed, like a cheap phone auto-exposure reacting to the bright windows. Very slight real smartphone fine sensor grain and ordinary digital sharpening; preserve full resolution and fine detail, no strong blur, no artificial film grain, no vignette. It must feel mundane and casually documented, no architectural-photography polish, no cinematic grading. Clean all possible printed markings off the cardboard boxes so they are completely plain unprinted brown cardboard. Absolutely no text, labels, logos, numbers, watermark, border or captions.
+

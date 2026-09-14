@@ -1,0 +1,16 @@
+Use case: identity-preserve
+Asset type: Before image for a wedding photographer's Before/After comparison.
+Input image: The provided wedding-dress.png is the EDIT TARGET and sole visual reference. Transform that exact photograph, not a new scene.
+Output: one photorealistic landscape PNG, EXACTLY 1536 x 1024 pixels, 3:2.
+
+Primary request: Make the photograph look like an ordinary unskilled friend took a quick smartphone record photo of the same bride and groom at the same location. Preserve recognizable identity and all spatial details with very high fidelity.
+
+INVARIANTS (highest priority): The SAME two Japanese adults, same faces, hairstyles, body proportions, and ages. Groom stays on the left wearing exactly the same dark black tuxedo, dark waistcoat, white shirt, black bow tie and white pocket square. Bride stays on the right wearing exactly the same sleeveless white V-neck lace wedding dress and hairstyle. Keep the SAME outdoor garden and stone path, SAME branches overhanging the upper left, SAME hedges on both sides, SAME tree trunks, foliage, small pale flowers, and pathway geometry. Keep the near-identical camera position, camera height, viewing direction, subject distance, subject scale, and overall framing. Do not replace the garden or rearrange objects. This is outdoors: there is no ceiling, indoor furniture, or window; do not add them.
+
+Allowed changes:
+1. Pose: they have stopped walking and stand stiffly side by side in a conventional awkward commemorative photo, bodies facing the camera, looking toward the friend with restrained slightly awkward smiles. Groom's hands down, bride's hands relaxed or lightly gathering the existing dress. Preserve face identity while turning faces toward camera.
+2. Lighting: remove ALL beautiful evening golden backlight, sunlight rays, glowing foliage, hair rim lights and cinematic contrast. Replace with flat dull overcast daytime ambient light, little shadow modeling, mildly underexposed dull skin. Slightly inaccurate yellow-green smartphone auto white balance, like a subtle fluorescent color cast, but the scene remains entirely outdoors.
+3. Amateur capture: slightly crooked horizon, about 2 degrees, casually imperfect composition, weak subject separation, busy garden background kept in greater focus as on a phone with no portrait mode. Reduce saturation and rich tonal depth. Flat unremarkable colors and modest phone processing. Preserve resolution and clear facial features; only very slight handheld softness, no heavy blur, no low-resolution/pixelated effect.
+
+Make the quality difference clearly visible: this should be a mundane amateur phone snapshot with stiff posing and dull lighting, never a polished professional wedding portrait. Keep all location details consistent rather than inventing clutter.
+No text, no Before/After labels, no graphics, no borders, no logo, no watermark.
